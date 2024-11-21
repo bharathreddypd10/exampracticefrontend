@@ -1,0 +1,71 @@
+<div class="user-profile">
+    <h2>User Profile</h2>
+        <!-- Profile Picture -->
+    <div class="profile-picture-container">
+        <img 
+        [src]="userDetails.profilePicture" 
+        class="profile-picture"
+        />
+    </div>
+  
+    <form class="profile-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput name="email" [(ngModel)]="userDetails.email" [readonly]="!isEditing">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput name="firstName" [(ngModel)]="userDetails.firstName" [readonly]="!isEditing">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput name="lastName" [(ngModel)]="userDetails.lastName" [readonly]="!isEditing">
+      </mat-form-field>
+  
+      <!-- New Phone Number Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input matInput name="phoneNumber" [(ngModel)]="userDetails.phoneNumber" [readonly]="!isEditing">
+      </mat-form-field>
+
+      <!-- Gender -->
+    <mat-form-field appearance="fill">
+        <mat-label>Gender</mat-label>
+        <input matInput name="gender" [(ngModel)]="userDetails.gender" [readonly]="!isEditing">
+      </mat-form-field>
+
+      <!-- Date of Birth -->
+    <mat-form-field appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input 
+          matInput 
+          type="date" 
+          name="dob" 
+          [(ngModel)]="userDetails.dob" 
+          [readonly]="!isEditing">
+      </mat-form-field>
+  
+      <!-- New Address Field -->
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput name="address" [(ngModel)]="userDetails.address" [readonly]="!isEditing">
+      </mat-form-field>
+    </form>
+  
+    <button mat-raised-button color="primary" (click)="toggleEdit()">
+      {{ isEditing ? 'Cancel' : 'Edit Profile' }}
+    </button>
+  
+    <!-- <button *ngIf="isEditing" mat-raised-button color="accent" (click)="saveProfile()">Save</button> -->
+  
+    <!-- Success and Error Messages -->
+    <div *ngIf="updateSuccess" class="success-message">
+      Profile updated successfully!
+    </div>
+    <div *ngIf="updateError" class="error-message">
+      There was an error updating your profile. Please try again.
+    </div>
+  </div>
+  

@@ -1,0 +1,71 @@
+.user-profile {
+    max-width: 600px;
+    margin: 50px auto; /* Centers the profile form */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-profile h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form fields */
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Ensures form fields take full width */
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto; /* Centers the button */
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .success-message, .error-message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .success-message {
+    color: #4caf50;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+  }
+  
+  .error-message {
+    color: #f44336;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .profile-picture-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image is cropped to fit the circle */
+    border: 3px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
